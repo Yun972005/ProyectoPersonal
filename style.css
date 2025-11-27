@@ -1,0 +1,21 @@
+* {
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+
+
+}
+
+body {
+
+    /*
+    background: linear-gradient(top top rgb(3, 20, 97)0%,black0%);
+    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    }
+
+#container {
+    
+}
