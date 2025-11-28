@@ -6,16 +6,35 @@
 }
 
 body {
-
-    /*
-    background: linear-gradient(top top rgb(3, 20, 97)0%,black0%);
-    */
+    width: 100%;
+    height: 100vh;
+    background: blue;
+    background: radial-gradient(ellipse at center, blue 0%, black 70%);
+    background-size: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+     text-align: center;
+    font-family: Arial, sans-serif; /* fuente para cambiarla luego*/
     }
 
-#container {
+p {
+    padding: 0;margin: 0;
+
     
+}
+
+.reloj {
+   
+}
+
+.neon {
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow:
+        0 0 10px #00eaff,
+        0 0 20px #00eaff,
+        0 0 40px #00eaff;
+    animation: brillo 2s infinite alternate;
 }

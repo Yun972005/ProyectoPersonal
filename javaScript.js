@@ -1,11 +1,14 @@
 function horaActual(){
-    let fecha= new date();
-    let hora = date.getHoras();
-    let minutos = date.getMinutos();
-    let segundos = date.getSegundos();
+    let fecha= new Date();
+    let hora = fecha.getHoras();
+    let minutos = fecha.getMinutos();
+    let segundos = fecha.getSegundos();
 
 
     let tiempoEnPantalla = hora + ":" +minutos + ":" + "segundos";
 
-    //juntarlo ahora con el html
+   document.getElementById("reloj").innerText = tiempoEnPantalla;
 }
+
+setInterval(horaActual, 1000);
+horaActual();
