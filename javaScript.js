@@ -1,14 +1,28 @@
+const API_URL = 'https://worldtimeapi.org/api/timezone';
+ 
+
 function horaActual(){
     let fecha= new Date();
-    let hora = fecha.getHoras();
-    let minutos = fecha.getMinutos();
-    let segundos = fecha.getSegundos();
 
+    let hora = fecha.getHours();
+    let minutos = fecha.getMinutes();
+    let segundos = fecha.getSeconds();
 
-    let tiempoEnPantalla = hora + ":" +minutos + ":" + "segundos";
+    // Usamos el método .toString().padStart(2, '0')
+        hora = hora.toString().padStart(2, '0');
+        minutos = minutos.toString().padStart(2, '0');
+        segundos = segundos.toString().padStart(2, '0');
 
-   document.getElementById("reloj").innerText = tiempoEnPantalla;
+    let tiempoEnPantalla = hora + ":" +minutos + ":" + segundos;
+
+   document.getElementById("reloj").textContent = tiempoEnPantalla;
 }
 
-setInterval(horaActual, 1000);
+function sitioHora(){
+    let sitio=new Sitio();
+    
+
+     document.getElementById("sitio").textContent = sitio;
+}
 horaActual();
+setInterval(horaActual, 1000);
