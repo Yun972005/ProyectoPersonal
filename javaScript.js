@@ -1,7 +1,7 @@
 const API_URL = 'https://worldtimeapi.org/api/timezone';
- 
+ const ZONA_POR_DEFECTO = 'Europe/Madrid';
 
-function horaActual(){
+function horaActualPorDefecto(){
     let fecha= new Date();
 
     let hora = fecha.getHours();
@@ -18,11 +18,12 @@ function horaActual(){
    document.getElementById("reloj").textContent = tiempoEnPantalla;
 }
 
-function sitioHora(){
-    let sitio=new Sitio();
-    
 
-     document.getElementById("sitio").textContent = sitio;
+
+function sitioHoraPorDefecto(){
+    
+     document.getElementById("sitio").textContent = ZONA_POR_DEFECTO;
 }
-horaActual();
-setInterval(horaActual, 1000);
+horaActualPorDefecto();
+setInterval(horaActualPorDefecto, 1000);
+sitioHoraPorDefecto();
